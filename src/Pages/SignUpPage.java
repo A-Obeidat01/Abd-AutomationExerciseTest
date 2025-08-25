@@ -138,21 +138,5 @@ public class SignUpPage {
     	
     }
     
-    public void itemSize(boolean needSize) throws InterruptedException {
-    	if (needSize) {
-    		Thread.sleep(2000);
-			System.out.println("This item need size");
-			driver.findElement(By.xpath("//label[@for='option344747']")).click();
-
-		}
-    }
-    	
-		
-	
-    
-    public boolean isSignUpSuccess() {
-    	return driver.getPageSource().contains("Your Account Has Been Created!");
-		
-	}
-
+   
 }

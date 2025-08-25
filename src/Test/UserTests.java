@@ -22,7 +22,6 @@ public class UserTests {
 	    SignUpPage signupPage;
 	    String firstName;
 	    String lastName;
-	    String username;
 	    String email;
 	    String password = "Test@1234";
 
@@ -34,6 +33,7 @@ public void setup() {
      signupPage =new SignUpPage(driver);
 	
 }
+
 
 @Test(priority = 1,enabled = true)
 public void NewCustomer() throws InterruptedException {
@@ -193,9 +193,9 @@ public void Review() throws InterruptedException {
 
 
 
-/*
+
 @AfterTest
 public void teardown() {
     DriverFactory.quitDriver();
-}*/
+}
 }

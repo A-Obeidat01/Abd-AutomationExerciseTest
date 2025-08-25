@@ -25,9 +25,6 @@ public class TestDataGenerator {
 	return first+last+rand.nextInt(7000)+"@gimal.com";
 	}
 	
-	public static String getRandUserName(String first , String last) {
-		return first+last+rand.nextInt(7000);
-	}
 	
 	public static WebElement getRandomProduct(WebDriver driver) {
         List<WebElement> listOfItem = driver.findElements(By.linkText("View Product"));
