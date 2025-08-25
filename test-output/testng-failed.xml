@@ -6,10 +6,17 @@
       <class name="Test.UserTests">
         <methods>
           <include name="Subscription"/>
+          <include name="testLogin"/>
+          <include name="viewingProductDetailsAndAddToCart"/>
+          <include name="NewCustomer"/>
           <include name="setup"/>
           <include name="Review"/>
+          <include name="testRegister2"/>
           <include name="testSelectRandomBrand"/>
           <include name="contactUs"/>
+          <include name="testRegister"/>
+          <include name="testCartAndCheckout"/>
+          <include name="testPayment"/>
         </methods>
       </class> <!-- Test.UserTests -->
     </classes>

@@ -43,7 +43,7 @@ public void NewCustomer() throws InterruptedException {
 	signupLogin.click();
 }
 
-@Test(priority = 2,enabled = true)
+@Test(priority = 2,enabled = true, dependsOnMethods = {"NewCustomer"})
 public void testRegister() throws InterruptedException {
 	Thread.sleep(2000);
 	firstName = TestDataGenerator.getRandFirstName();
@@ -54,7 +54,7 @@ public void testRegister() throws InterruptedException {
   
 }
 
-@Test(priority = 3,enabled = true)
+@Test(priority = 3,enabled = true, dependsOnMethods = {"testRegister"})
 public void testRegister2() throws InterruptedException {
 	Thread.sleep(500);
 	String firstName = TestDataGenerator.getRandFirstName();
@@ -68,21 +68,21 @@ public void testRegister2() throws InterruptedException {
 
 	
 }
-@Test(priority = 4,enabled = true)
+@Test(priority = 4,enabled = true, dependsOnMethods = {"testRegister2"})
 public void testLogout() throws InterruptedException {
     WebElement logoutButton = driver.findElement(By.xpath("//a[normalize-space()='Logout']"));
     logoutButton.click();
     Thread.sleep(1000);
 }
 
-@Test(priority = 5,enabled = true, dependsOnMethods = {"testRegister"})
+@Test(priority = 5,enabled = true, dependsOnMethods = {"testRegister2"})
 public void testLogin() throws InterruptedException {
     driver.findElement(By.xpath("//input[@data-qa='login-email']")).sendKeys(email);
     driver.findElement(By.xpath("//input[@placeholder='Password']")).sendKeys(password);
     driver.findElement(By.xpath("//button[normalize-space()='Login']")).click();
 }
 
-@Test(priority = 6,enabled =true)
+@Test(priority = 6,enabled =true,dependsOnMethods = {"testLogin"})
 public void viewingProductDetailsAndAddToCart() throws InterruptedException {
 	Thread.sleep(2000);
 	 int numberOfProductsToAdd = 3;  
@@ -92,17 +92,19 @@ public void viewingProductDetailsAndAddToCart() throws InterruptedException {
 	    	
 	    	WebElement addToCrtButton = driver.findElement(By.xpath("//button[@type='button']"));
 	    	WebElement continueShoppinButton = driver.findElement(By.xpath(" //button[@class='btn btn-success close-modal btn-block']"));
-	    
+	    	Thread.sleep(1000);
 	    	addToCrtButton.click();
-	    	Thread.sleep(500);
+	    	Thread.sleep(2000);
 	    	continueShoppinButton.click();
+	    	Thread.sleep(1000);
 	    	driver.navigate().back();
+	    	Thread.sleep(1000);
 	    }
 	 
 }
 
 
-@Test(priority = 7, enabled = true)
+@Test(priority = 7, enabled = true,dependsOnMethods = {"viewingProductDetailsAndAddToCart"})
 public void testCartAndCheckout() throws InterruptedException {
 	Thread.sleep(1000);
     WebElement cartButton = driver.findElement(By.xpath("/html[1]/body[1]/header[1]/div[1]/div[1]/div[1]/div[2]/div[1]/ul[1]/li[3]/a[1]"));
@@ -133,7 +135,7 @@ public void testPayment() throws InterruptedException {
     Thread.sleep(1000);
     driver.findElement(By.xpath("//a[@class='btn btn-primary']")).click();
 }
-@Test(priority = 9, enabled =true)
+@Test(priority = 9, enabled =true,dependsOnMethods = {"testPayment"})
 public void contactUs() throws InterruptedException {
 	driver.findElement(By.xpath("//a[normalize-space()='Contact us']")).click();
 	Thread.sleep(500);
@@ -151,7 +153,7 @@ public void contactUs() throws InterruptedException {
 
   
 }
-@Test(priority = 10, enabled =true)
+@Test(priority = 10, enabled =true,dependsOnMethods = {"contactUs"})
 public void Subscription() throws InterruptedException {
 	JavascriptExecutor js = (JavascriptExecutor) driver;
 	js.executeScript("window.scrollTo(0,8000)");
@@ -165,12 +167,12 @@ public void Subscription() throws InterruptedException {
 
   
 }
-@Test(priority = 11, enabled = true,invocationCount = 2)
+@Test(priority = 11, enabled = true,invocationCount = 2,dependsOnMethods = {"Subscription"})
 public void testSelectRandomBrand() throws InterruptedException {
 	signupPage.selectRandomBrand(driver);
 }
 
-@Test(priority = 12,enabled =true)
+@Test(priority = 12,enabled =true,dependsOnMethods = {"testSelectRandomBrand"})
 public void Review() throws InterruptedException {
 	Thread.sleep(2000);
 	driver.navigate().to("https://www.automationexercise.com/");   

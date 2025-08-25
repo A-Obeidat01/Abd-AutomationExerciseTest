@@ -2,68 +2,68 @@
 <testng-results ignored="0" total="13" passed="13" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2025-08-25T16:30:54 AST" name="Default suite" finished-at="2025-08-25T16:31:57 AST" duration-ms="63148">
+  <suite started-at="2025-08-25T21:16:02 AST" name="Default suite" finished-at="2025-08-25T21:18:24 AST" duration-ms="141724">
     <groups>
     </groups>
-    <test started-at="2025-08-25T16:30:54 AST" name="Default test" finished-at="2025-08-25T16:31:57 AST" duration-ms="63148">
+    <test started-at="2025-08-25T21:16:02 AST" name="Default test" finished-at="2025-08-25T21:18:24 AST" duration-ms="141724">
       <class name="Test.UserTests">
-        <test-method is-config="true" signature="setup()[pri:0, instance:Test.UserTests@6a78afa0]" started-at="2025-08-25T16:30:54 AST" name="setup" finished-at="2025-08-25T16:31:00 AST" duration-ms="6551" status="PASS">
+        <test-method is-config="true" signature="setup()[pri:0, instance:Test.UserTests@6a78afa0]" started-at="2025-08-25T21:16:02 AST" name="setup" finished-at="2025-08-25T21:16:16 AST" duration-ms="14184" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method signature="NewCustomer()[pri:1, instance:Test.UserTests@6a78afa0]" started-at="2025-08-25T16:31:00 AST" name="NewCustomer" finished-at="2025-08-25T16:31:03 AST" duration-ms="3075" status="PASS">
+        <test-method signature="NewCustomer()[pri:1, instance:Test.UserTests@6a78afa0]" started-at="2025-08-25T21:16:16 AST" name="NewCustomer" finished-at="2025-08-25T21:16:20 AST" duration-ms="3875" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- NewCustomer -->
-        <test-method signature="testRegister()[pri:2, instance:Test.UserTests@6a78afa0]" started-at="2025-08-25T16:31:03 AST" name="testRegister" finished-at="2025-08-25T16:31:07 AST" duration-ms="3454" status="PASS">
+        <test-method signature="testRegister()[pri:2, instance:Test.UserTests@6a78afa0]" started-at="2025-08-25T21:16:20 AST" name="testRegister" finished-at="2025-08-25T21:16:24 AST" depends-on-methods="Test.UserTests.NewCustomer" duration-ms="3976" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testRegister -->
-        <test-method signature="testRegister2()[pri:3, instance:Test.UserTests@6a78afa0]" started-at="2025-08-25T16:31:07 AST" name="testRegister2" finished-at="2025-08-25T16:31:13 AST" duration-ms="6676" status="PASS">
+        <test-method signature="testRegister2()[pri:3, instance:Test.UserTests@6a78afa0]" started-at="2025-08-25T21:16:24 AST" name="testRegister2" finished-at="2025-08-25T21:16:36 AST" depends-on-methods="Test.UserTests.testRegister" duration-ms="11932" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testRegister2 -->
-        <test-method signature="testLogout()[pri:4, instance:Test.UserTests@6a78afa0]" started-at="2025-08-25T16:31:13 AST" name="testLogout" finished-at="2025-08-25T16:31:16 AST" duration-ms="2891" status="PASS">
+        <test-method signature="testLogout()[pri:4, instance:Test.UserTests@6a78afa0]" started-at="2025-08-25T21:16:36 AST" name="testLogout" finished-at="2025-08-25T21:16:39 AST" depends-on-methods="Test.UserTests.testRegister2" duration-ms="3415" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testLogout -->
-        <test-method signature="testLogin()[pri:5, instance:Test.UserTests@6a78afa0]" started-at="2025-08-25T16:31:16 AST" name="testLogin" finished-at="2025-08-25T16:31:17 AST" depends-on-methods="Test.UserTests.testRegister" duration-ms="178" status="PASS">
+        <test-method signature="testLogin()[pri:5, instance:Test.UserTests@6a78afa0]" started-at="2025-08-25T21:16:39 AST" name="testLogin" finished-at="2025-08-25T21:16:46 AST" depends-on-methods="Test.UserTests.testRegister2" duration-ms="6373" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testLogin -->
-        <test-method signature="viewingProductDetailsAndAddToCart()[pri:6, instance:Test.UserTests@6a78afa0]" started-at="2025-08-25T16:31:17 AST" name="viewingProductDetailsAndAddToCart" finished-at="2025-08-25T16:31:26 AST" duration-ms="9817" status="PASS">
+        <test-method signature="viewingProductDetailsAndAddToCart()[pri:6, instance:Test.UserTests@6a78afa0]" started-at="2025-08-25T21:16:46 AST" name="viewingProductDetailsAndAddToCart" finished-at="2025-08-25T21:17:13 AST" depends-on-methods="Test.UserTests.testLogin" duration-ms="27597" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- viewingProductDetailsAndAddToCart -->
-        <test-method signature="testCartAndCheckout()[pri:7, instance:Test.UserTests@6a78afa0]" started-at="2025-08-25T16:31:26 AST" name="testCartAndCheckout" finished-at="2025-08-25T16:31:31 AST" duration-ms="4797" status="PASS">
+        <test-method signature="testCartAndCheckout()[pri:7, instance:Test.UserTests@6a78afa0]" started-at="2025-08-25T21:17:13 AST" name="testCartAndCheckout" finished-at="2025-08-25T21:17:25 AST" depends-on-methods="Test.UserTests.viewingProductDetailsAndAddToCart" duration-ms="11657" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testCartAndCheckout -->
-        <test-method signature="testPayment()[pri:8, instance:Test.UserTests@6a78afa0]" started-at="2025-08-25T16:31:31 AST" name="testPayment" finished-at="2025-08-25T16:31:39 AST" depends-on-methods="Test.UserTests.testCartAndCheckout, Test.UserTests.viewingProductDetailsAndAddToCart" duration-ms="7824" status="PASS">
+        <test-method signature="testPayment()[pri:8, instance:Test.UserTests@6a78afa0]" started-at="2025-08-25T21:17:25 AST" name="testPayment" finished-at="2025-08-25T21:17:39 AST" depends-on-methods="Test.UserTests.testCartAndCheckout, Test.UserTests.viewingProductDetailsAndAddToCart" duration-ms="14152" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testPayment -->
-        <test-method signature="contactUs()[pri:9, instance:Test.UserTests@6a78afa0]" started-at="2025-08-25T16:31:39 AST" name="contactUs" finished-at="2025-08-25T16:31:45 AST" duration-ms="5770" status="PASS">
+        <test-method signature="contactUs()[pri:9, instance:Test.UserTests@6a78afa0]" started-at="2025-08-25T21:17:39 AST" name="contactUs" finished-at="2025-08-25T21:17:54 AST" depends-on-methods="Test.UserTests.testPayment" duration-ms="14310" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- contactUs -->
-        <test-method signature="Subscription()[pri:10, instance:Test.UserTests@6a78afa0]" started-at="2025-08-25T16:31:45 AST" name="Subscription" finished-at="2025-08-25T16:31:47 AST" duration-ms="2199" status="PASS">
+        <test-method signature="Subscription()[pri:10, instance:Test.UserTests@6a78afa0]" started-at="2025-08-25T21:17:54 AST" name="Subscription" finished-at="2025-08-25T21:17:56 AST" depends-on-methods="Test.UserTests.contactUs" duration-ms="2478" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Subscription -->
-        <test-method signature="testSelectRandomBrand()[pri:11, instance:Test.UserTests@6a78afa0]" started-at="2025-08-25T16:31:47 AST" name="testSelectRandomBrand" finished-at="2025-08-25T16:31:48 AST" duration-ms="993" status="PASS">
+        <test-method signature="testSelectRandomBrand()[pri:11, instance:Test.UserTests@6a78afa0]" started-at="2025-08-25T21:17:56 AST" name="testSelectRandomBrand" finished-at="2025-08-25T21:18:01 AST" depends-on-methods="Test.UserTests.Subscription" duration-ms="5394" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testSelectRandomBrand -->
-        <test-method signature="testSelectRandomBrand()[pri:11, instance:Test.UserTests@6a78afa0]" started-at="2025-08-25T16:31:48 AST" name="testSelectRandomBrand" finished-at="2025-08-25T16:31:49 AST" duration-ms="939" status="PASS">
+        <test-method signature="testSelectRandomBrand()[pri:11, instance:Test.UserTests@6a78afa0]" started-at="2025-08-25T21:18:01 AST" name="testSelectRandomBrand" finished-at="2025-08-25T21:18:08 AST" depends-on-methods="Test.UserTests.Subscription" duration-ms="6833" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testSelectRandomBrand -->
-        <test-method signature="Review()[pri:12, instance:Test.UserTests@6a78afa0]" started-at="2025-08-25T16:31:49 AST" name="Review" finished-at="2025-08-25T16:31:56 AST" duration-ms="7529" status="PASS">
+        <test-method signature="Review()[pri:12, instance:Test.UserTests@6a78afa0]" started-at="2025-08-25T21:18:08 AST" name="Review" finished-at="2025-08-25T21:18:23 AST" depends-on-methods="Test.UserTests.testSelectRandomBrand" duration-ms="14886" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Review -->
-        <test-method is-config="true" signature="teardown()[pri:0, instance:Test.UserTests@6a78afa0]" started-at="2025-08-25T16:31:56 AST" name="teardown" finished-at="2025-08-25T16:31:57 AST" duration-ms="397" status="PASS">
+        <test-method is-config="true" signature="teardown()[pri:0, instance:Test.UserTests@6a78afa0]" started-at="2025-08-25T21:18:23 AST" name="teardown" finished-at="2025-08-25T21:18:24 AST" duration-ms="518" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- teardown -->
